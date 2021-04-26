@@ -19,11 +19,6 @@ login = rs.robinhood.authentication.login(username=usr_name,
 #returns a dictionary with ticker symbol as key, value is a dictionary
 hold = rs.robinhood.account.build_holdings(with_dividends=True)
 
-#geneate dict template: {'symbol': {}, 'symbol': {}, etc}
-sd = {} #stock data
-for keys in hold:
-    sd.update({keys:{}})
-
 #parse through the dictionaries to retrieve data
 for key, value in hold.items():
 
